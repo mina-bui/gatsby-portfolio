@@ -1,4 +1,4 @@
-# Gatsby.js Portfolio
+# Gatsby.js Portfolio (Work in Progress)
 
 A portfolio site, showcasing my recent projects and skills, built with Gatsby.js, TypeScript, JavaScript, Sass, and more. Made with gatsby-starter-default. A work in progress. 
 
