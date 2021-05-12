@@ -9,6 +9,13 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
+    <StaticImage
+      src="../images/index_s1.jpg"
+      width={300}
+      quality={95}
+      formats={["AUTO", "WEBP", "AVIF"]}
+      alt="Mushrooms on a log. Photo by Sander Weeteling on Unsplash. (https://unsplash.com/photos/4MZlDAiIpoI)"
+    />
     <h1>Section 1: Mina Bui</h1>
     <p>
       Front-End Developer and Web Designer based in Vancouver, BC. <br />
@@ -46,7 +53,6 @@ const IndexPage = () => (
       quality={95}
       formats={["AUTO", "WEBP", "AVIF"]}
       alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
     />
     <p>
       <Link to="/page-2/">Go to page 2</Link> <br />
