@@ -8,9 +8,38 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi Folks!</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+
+    <h1>Section 1: Mina Bui</h1>
+    <p>
+      Front-End Developer and Web Designer based in Vancouver, BC. <br />
+      I like to build responsive, interactive websites and web applications.
+    </p>
+    <p>
+      <button>Hire Me</button>
+    </p>
+
+    <hr />
+
+    <h2>Section 2: About Me</h2>
+    <p>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+    </p>
+    <p>
+      <button>Read More About Me</button>
+    </p>
+
+    <hr />
+
+    <h2>Section 3: My Projects</h2>
+    <p>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+    </p>
+    <p>
+      <button>See All My Projects</button>
+    </p>
+
+    <hr />
+
     <StaticImage
       src="../images/gatsby-astronaut.png"
       width={300}
@@ -23,6 +52,9 @@ const IndexPage = () => (
       <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </p>
+
+    <hr />
+
   </Layout>
 )
 

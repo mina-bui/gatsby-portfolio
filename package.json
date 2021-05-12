@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Mina Bui's web developer portfolio, made with gatsby-starter-default.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Mina Bui <hello@minabui.com>",
   "dependencies": {
     "gatsby": "^3.2.1",
     "gatsby-plugin-gatsby-cloud": "^2.2.0",
