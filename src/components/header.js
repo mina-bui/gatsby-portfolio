@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
 
       <div class="header-hire">
         <ul>
-          <li><Link to="/page-2/">Hire Me</Link></li>
+          <li><Link to="/page-2/" id="header-hire-btn">Hire Me</Link></li>
         </ul>
       </div>
 
