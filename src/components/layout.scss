@@ -1,3 +1,112 @@
+@font-face {
+  font-family: "League Spartan";
+  src: local("league-spartan"), url(../fonts/league-spartan/LeagueSpartan-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: local("libre-baskerville"), url(../fonts/libre-baskerville/LibreBaskerville-Regular.otf) format("opentype");
+}
+
+header {
+  position: absolute; // Start: Makes the header overlap with the content
+  left: 0;
+  right: 0;
+  top: 0; // End
+  color: white;
+  text-align: center;
+  padding: 30px 0px;
+
+  .header-flex {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    a {
+      color: white;
+    }
+  }
+  .header-nav {
+    text-align: left;
+    font-size: 16px;
+  }
+  .header-hire {
+    text-align: right;
+    font-size: 16px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button {
+  text-transform: uppercase;
+}
+
+header,
+.section-1,
+.section-2,
+.section-3,
+.section-4,
+footer {
+  padding: 30px 15%;
+}
+.section-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../images/index_s1.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
+  background-size: cover;
+  background-position-y: 50%;
+  width: 100%;
+  height: 1000px;
+  padding: 400px 15% 0px 15%; // padding-top prevents text overlap with header
+  color: white;
+
+  button {
+    color: white;
+  }
+}
+
+// Buttons, Lists, Links, etc.
+button {
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  margin: none;
+  padding: none;
+  color: black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:link {
+    color: black;
+  }
+  &:visited {
+    color: black;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: black;
+  }
+}
+
+// End My Code
+// ===========================================
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -10,7 +119,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: Libre Baskerville, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -19,6 +128,7 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
+
 article,
 aside,
 details,
@@ -81,8 +191,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: League Spartan, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -260,8 +369,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: League Spartan, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -277,8 +385,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: League Spartan, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -294,8 +401,8 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -311,8 +418,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: League Spartan, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -328,8 +434,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: League Spartan, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -567,8 +672,8 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier,
+    monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
