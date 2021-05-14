@@ -1,3 +1,26 @@
+/* ========================================= */
+/* || Table of Contents
+
+  1. Typography
+      a. Fonts
+      b. Color Palette
+
+  2. General Styles
+      a. Headings
+      b. Sections
+      c. Text-related styling
+      d. Code, Preformatted Text, etc.
+      e. Image and Graphics
+      f. Lists
+      g. Tables
+      h. Links, Buttons, Lists, Input, etc.
+
+  3. Header and Main Navigation */
+
+/* ========================================= */
+/* || Typography */
+
+/* Fonts */
 @font-face {
   font-family: "League Spartan";
   src: local("league-spartan"), url(../fonts/league-spartan/LeagueSpartan-Bold.otf) format("opentype");
@@ -8,53 +31,86 @@
   src: local("libre-baskerville"), url(../fonts/libre-baskerville/LibreBaskerville-Regular.otf) format("opentype");
 }
 
-header {
-  position: absolute; // Start: Makes the header overlap with the content
-  left: 0;
-  right: 0;
-  top: 0; // End
-  color: white;
-  text-align: center;
-  padding: 30px 0px;
+$headingFont: League Spartan, sans-serif;
+$bodyFont: Libre Baskerville, serif;
 
-  .header-flex {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-items: center;
-    a {
-      color: white;
-    }
-  }
-  .header-nav {
-    text-align: left;
-    font-size: 16px;
-  }
-  .header-hire {
-    text-align: right;
-    font-size: 16px;
-    #header-hire-btn {
-      border: 1px solid white;
-      padding: 10px 40px;
-    }
-  }
+/* Color Palette */
+$green1: #cef79f;
+$green2: #83ba36;
+$green3: #69952b;
+$green4: #5c8226;
+$green5: #2a513f;
+$lightgrey1: #f6f6f6;
+$lightgrey2: #f1f1f1;
+/* also white, black */
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* ========================================= */
+/* || General styles */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font: 112.5%/1.45em $bodyFont;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
   }
 }
 
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: $bodyFont;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+/* || Headings */
 h2,
 h3,
 h4,
 h5,
-h6,
-a,
-button {
+h6 {
+  margin: 0 0 1.45rem 0;
+  padding: 0 0 0 0;
+  color: inherit;
+  font-family: $headingFont;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
   text-transform: uppercase;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 1.62671rem;
+}
+h3 {
+  font-size: 1.38316rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.85028rem;
+}
+h6 {
+  font-size: 0.78405rem;
 }
 
+/* || Sections */
 .section-1,
 .section-2,
 .section-3,
@@ -76,62 +132,6 @@ footer {
   }
 }
 
-// Buttons, Lists, Links, etc.
-button {
-  background: transparent;
-  border: none;
-  text-transform: uppercase;
-  margin: none;
-  padding: none;
-  color: black;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-a {
-  text-decoration: none;
-
-  &:link {
-    color: black;
-  }
-  &:visited {
-    color: black;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-  &:active {
-    color: black;
-  }
-}
-
-// End My Code
-// ===========================================
-
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em Libre Baskerville, serif;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: Libre Baskerville, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
-}
-
 article,
 aside,
 details,
@@ -146,6 +146,7 @@ section,
 summary {
   display: block;
 }
+
 audio,
 canvas,
 progress,
@@ -163,19 +164,13 @@ progress {
 template {
   display: none;
 }
-a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-a:active,
-a:hover {
-  outline-width: 0;
-}
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
   text-decoration: none;
 }
+
+/* || Text-related styling */
 b,
 strong {
   font-weight: inherit;
@@ -183,16 +178,6 @@ strong {
 }
 dfn {
   font-style: italic;
-}
-h1 {
-  margin: 0 0 1.45rem 0;
-  padding: 0 0 0 0;
-  color: inherit;
-  font-family: League Spartan, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
-  line-height: 1.1;
 }
 mark {
   background-color: #ff0;
@@ -214,6 +199,80 @@ sub {
 sup {
   top: -0.5em;
 }
+blockquote {
+  margin: 0 1.45rem 1.45rem 1.45rem;
+  padding: 0 0 0 0;
+}
+b,
+strong,
+dt,
+th {
+  font-weight: bold;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+}
+
+/* || Code, Preformatted Text, Etc */
+tt,
+code {
+  background-color: hsla(0, 0%, 0%, 0.04);
+  border-radius: 3px;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier,
+    monospace;
+  padding: 0.2em 0;
+}
+code:before,
+code:after,
+tt:before,
+tt:after {
+  letter-spacing: -0.2em;
+  content: " ";
+}
+pre code:before,
+pre code:after,
+pre tt:before,
+pre tt:after {
+  content: " ";
+}
+code,
+kbd,
+samp {
+  font-family: monospace;
+  font-size: 1em;
+  font-size: 0.85rem;
+  line-height: 1.45rem;
+}
+pre {
+  margin: 0 0 1.45rem 0;
+  font-size: 0.85rem;
+  line-height: 1.42;
+  background: hsla(0, 0%, 0%, 0.04);
+  border-radius: 3px;
+  overflow: auto;
+  word-wrap: normal;
+  padding: 1.45rem;
+  font-family: monospace;
+  code {
+    background: none;
+    line-height: 1.42;
+  }
+}
+hgroup,
+dl,
+dd,
+p,
+form,
+noscript,
+iframe,
+address {
+  margin: 0 0 1.45rem 0;
+  padding: 0 0 0 0;
+}
+
+/* || Images and Graphics */
 img {
   border-style: none;
   max-width: 100%;
@@ -223,17 +282,93 @@ img {
 svg:not(:root) {
   overflow: hidden;
 }
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace;
-  font-size: 1em;
-}
 figure {
   margin: 0 0 1.45rem 0;
   padding: 0 0 0 0;
 }
+
+/* || Lists */
+ul,
+ol {
+  margin: 0 0 1.45rem 1.45rem;
+  padding: 0 0 0 0;
+  list-style-position: outside;
+  list-style-image: none;
+}
+li {
+  margin-bottom: calc(1.45rem / 2);
+}
+ol li,
+ul li {
+  padding-left: 0;
+}
+li > ol,
+li > ul {
+  margin: calc(1.45rem / 2) 0 calc(1.45rem / 2) 1.45rem;
+}
+blockquote *:last-child,
+li *:last-child,
+p *:last-child {
+  margin-bottom: 0;
+}
+li > p {
+  margin-bottom: calc(1.45rem / 2);
+}
+
+/* || Tables */
+table {
+  margin: 0 0 1.45rem 0;
+  padding: 0 0 0 0;
+  font-size: 1rem;
+  line-height: 1.45rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+thead {
+  text-align: left;
+}
+td,
+th {
+  text-align: left;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  font-feature-settings: "tnum";
+  -moz-font-feature-settings: "tnum";
+  -ms-font-feature-settings: "tnum";
+  -webkit-font-feature-settings: "tnum";
+  padding: 0.725rem 0.96667rem calc(0.725rem - 1px) 0.96667rem;
+}
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+/* || Links, Buttons, Lists, Input, etc.*/
+
+/* || Links */
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+
+  &:link,
+  &:visited {
+    color: black;
+  }
+  &:hover {
+    text-decoration: underline;
+    outline-width: 0;
+  }
+  &:active {
+    color: black;
+    outline-width: 0;
+  }
+}
+
 hr {
   box-sizing: content-box;
   overflow: visible;
@@ -243,7 +378,24 @@ hr {
   border: none;
   height: 1px;
 }
-button,
+
+/* || Buttons */
+button {
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  margin: none;
+  padding: none;
+  color: black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+}
 input,
 optgroup,
 select,
@@ -254,17 +406,14 @@ textarea {
 optgroup {
   font-weight: 700;
 }
-button,
 input {
   overflow: visible;
 }
-button,
 select {
   text-transform: none;
 }
 [type="reset"],
 [type="submit"],
-button,
 html [type="button"] {
   -webkit-appearance: button;
 }
@@ -322,168 +471,56 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
-* {
-  box-sizing: inherit;
+
+/* ========================================= */
+/* || Header and Main Navigation */
+
+header {
+  position: absolute; // Start: Makes the header overlap with the content
+  left: 0;
+  right: 0;
+  top: 0; // End
+  color: white;
+  text-align: center;
+  padding: 30px 0px;
+
+  .header-flex {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    a {
+      color: white;
+    }
+  }
+  .header-nav {
+    text-align: left;
+    font-size: 16px;
+  }
+  .header-hire {
+    text-align: right;
+    font-size: 16px;
+    #header-hire-btn {
+      border: 1px solid white;
+      padding: 10px 40px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 }
-*:before {
-  box-sizing: inherit;
-}
-*:after {
-  box-sizing: inherit;
-}
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h1 {
   margin: 0 0 1.45rem 0;
   padding: 0 0 0 0;
   color: inherit;
-  font-family: League Spartan, sans-serif;
+  font-family: $headingFont;
   font-weight: bold;
   text-rendering: optimizeLegibility;
+  font-size: 2.25rem;
   line-height: 1.1;
 }
-h2 {
-  font-size: 1.62671rem;
-}
-h3 {
-  font-size: 1.38316rem;
-}
-h4 {
-  font-size: 1rem;
-}
-h5 {
-  font-size: 0.85028rem;
-}
-h6 {
-  font-size: 0.78405rem;
-}
-hgroup,
-dl,
-dd,
-p,
-form,
-noscript,
-iframe,
-address {
-  margin: 0 0 1.45rem 0;
-  padding: 0 0 0 0;
-}
-ul,
-ol {
-  margin: 0 0 1.45rem 1.45rem;
-  padding: 0 0 0 0;
-  list-style-position: outside;
-  list-style-image: none;
-}
-pre {
-  margin: 0 0 1.45rem 0;
-  font-size: 0.85rem;
-  line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  overflow: auto;
-  word-wrap: normal;
-  padding: 1.45rem;
-}
-table {
-  margin: 0 0 1.45rem 0;
-  padding: 0 0 0 0;
-  font-size: 1rem;
-  line-height: 1.45rem;
-  border-collapse: collapse;
-  width: 100%;
-}
-blockquote {
-  margin: 0 1.45rem 1.45rem 1.45rem;
-  padding: 0 0 0 0;
-}
-b,
-strong,
-dt,
-th {
-  font-weight: bold;
-}
-li {
-  margin-bottom: calc(1.45rem / 2);
-}
-ol li,
-ul li {
-  padding-left: 0;
-}
-li > ol,
-li > ul {
-  margin: calc(1.45rem / 2) 0 calc(1.45rem / 2) 1.45rem;
-}
-blockquote *:last-child,
-li *:last-child,
-p *:last-child {
-  margin-bottom: 0;
-}
-li > p {
-  margin-bottom: calc(1.45rem / 2);
-}
-code,
-kbd,
-samp {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}
-abbr,
-acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
 
-thead {
-  text-align: left;
-}
-td,
-th {
-  text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-  font-feature-settings: "tnum";
-  -moz-font-feature-settings: "tnum";
-  -ms-font-feature-settings: "tnum";
-  -webkit-font-feature-settings: "tnum";
-  padding: 0.725rem 0.96667rem calc(0.725rem - 1px) 0.96667rem;
-}
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
-tt,
-code {
-  background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier,
-    monospace;
-  padding: 0.2em 0;
-}
-pre code {
-  background: none;
-  line-height: 1.42;
-}
-code:before,
-code:after,
-tt:before,
-tt:after {
-  letter-spacing: -0.2em;
-  content: " ";
-}
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: " ";
-}
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
+/* ========================================= */

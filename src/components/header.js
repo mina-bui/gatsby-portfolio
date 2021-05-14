@@ -10,9 +10,9 @@ const Header = ({ siteTitle }) => (
       <div class="header-nav">
         <nav>
           <ul>
-            <li><Link to="/page-2/">About</Link></li>
-            <li><Link to="/page-2/">Projects</Link></li>
-            <li><Link to="/page-2/">Contact</Link></li>
+            <li><Link to="/about/">About</Link></li>
+            <li><Link to="/projects/">Projects</Link></li>
+            <li><Link to="/contact/">Contact</Link></li>
           </ul>
         </nav>
       </div>
@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
 
       <div class="header-hire">
         <ul>
-          <li><Link to="/page-2/" id="header-hire-btn">Hire Me</Link></li>
+          <li><Link to="mailto:hello@minabui.com?subject=Hello from your site!" id="header-hire-btn">Hire Me</Link></li>
         </ul>
       </div>
 
