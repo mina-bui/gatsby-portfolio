@@ -119,16 +119,57 @@ footer {
   padding: 30px 15%;
 }
 .section-1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../images/index_s1.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/index_s1.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
   background-size: cover;
-  background-position-y: 50%;
+  background-position-y: 65%;
   width: 100%;
   height: 1000px;
-  padding: 400px 15% 0px 15%; // padding-top prevents text overlap with header
+  padding: 250px 15% 0px 15%; // padding-top prevents text overlap with header
+  color: black;
+
+  button {
+    color: black;
+  }
+}
+.section-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/index_s2.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
+  background-size: cover;
+  background-position-x: 10%;
+  background-position-y: 50%;
+  width: 100%;
+  height: 750px;
+  padding: 175px 15% 0px 7%;
   color: white;
+  margin-top: 0px;
 
   button {
     color: white;
+  }
+
+  h2,
+  p {
+    width: 60%;
+  }
+}
+
+.section-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/index_s3.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
+  background-size: cover;
+  background-position-x: 10%;
+  background-position-y: 50%;
+  width: 100%;
+  height: 750px;
+  padding: 175px 15% 0px 7%;
+  color: white;
+  margin-top: 0px;
+
+  button {
+    color: white;
+  }
+
+  h2,
+  p {
+    width: 60%;
   }
 }
 
@@ -480,7 +521,7 @@ header {
   left: 0;
   right: 0;
   top: 0; // End
-  color: white;
+  color: black;
   text-align: center;
   padding: 30px 0px;
 
@@ -489,7 +530,7 @@ header {
     grid-template-columns: auto auto auto;
     justify-items: center;
     a {
-      color: white;
+      color: black;
     }
   }
   .header-nav {
@@ -500,7 +541,7 @@ header {
     text-align: right;
     font-size: 16px;
     #header-hire-btn {
-      border: 1px solid white;
+      border: 1px solid black;
       padding: 10px 40px;
     }
   }
@@ -522,5 +563,3 @@ h1 {
   font-size: 2.25rem;
   line-height: 1.1;
 }
-
-/* ========================================= */
