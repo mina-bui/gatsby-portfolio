@@ -10,11 +10,11 @@ const IndexPage = () => (
     <SEO title="Home" />
 
     <div class="section-1">
-      <h2>Mina Bui</h2>
+      <h2 class="section-1_h2">Mina Bui</h2>
       <p>
-        Front-End Developer and Web Designer based in Vancouver, BC. <br />
-      I like to build responsive, interactive websites and web applications.
-    </p>
+        Front-End Developer and Web Designer based in Vancouver. <br />
+      I build responsive, interactive websites and web applications. <Link to="/about/">Learn more.</Link>
+      </p>
       <p>
         <Link to="/contact/"><button>Contact Me</button></Link>
       </p>
