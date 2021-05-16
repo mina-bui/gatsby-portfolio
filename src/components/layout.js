@@ -12,6 +12,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.scss"
 
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -29,9 +33,32 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()} Mina Bui. Built with
+          <div class="footer_social">
+
+          </div>
+
+          <br />
+
+          <div class="footer_logo">
+            <Link>
+              <StaticImage
+                src="../images/mina-bui_logo.png"
+                width={300}
+                quality={95}
+                formats={["AUTO", "WEBP", "AVIF"]}
+                alt="Mina Bui's Logo"
+              />
+            </Link>
+          </div>
+
+          <br />
+
+          <div class="footer_copyright">
+            Copyright © {new Date().getFullYear()} Mina Bui. All rights reserved. Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>..
+            <a href="https://www.gatsbyjs.com">Gatsby</a>.
+          </div>
+
         </footer>
       </div>
     </>
