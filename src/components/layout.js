@@ -38,25 +38,22 @@ const Layout = ({ children }) => {
           </div>
 
           <br />
+          <div class="footer_line2">
+            <div class="footer_logo">
+              <Link to="/">
+                <StaticImage
+                  src="../images/mina-bui_logo.png"
+                  width={300}
+                  quality={95}
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                  alt="Mina Bui's Logo"
+                />
+              </Link>
+            </div>
 
-          <div class="footer_logo">
-            <Link>
-              <StaticImage
-                src="../images/mina-bui_logo.png"
-                width={300}
-                quality={95}
-                formats={["AUTO", "WEBP", "AVIF"]}
-                alt="Mina Bui's Logo"
-              />
-            </Link>
-          </div>
-
-          <br />
-
-          <div class="footer_copyright">
-            Copyright © {new Date().getFullYear()} Mina Bui. All rights reserved. Built with
-          {` `}
-            <a href="https://www.gatsbyjs.com">Gatsby</a>.
+            <div class="footer_copyright">
+              © {new Date().getFullYear()} Mina Bui. Built with {` `} <a href="https://www.gatsbyjs.com">Gatsby</a>.
+            </div>
           </div>
 
         </footer>

@@ -10,7 +10,7 @@ const IndexPage = () => (
     <SEO title="Home" />
 
     <div class="section-1">
-      <h2 class="section-1_h2">Mina Bui</h2>
+      <h1 class="section-1_h2">Mina Bui</h1>
       <p>
         Front-End Developer and Web Designer based in Vancouver. <br />
       I build responsive, interactive websites and web applications. <Link to="/about/">Learn more.</Link>

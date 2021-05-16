@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const AboutPage = () => (
     <Layout>
-        <SEO title="About Page" />
+        <SEO title="About" />
         <h1>Hi from the About page</h1>
         <Link to="/page-2">Go back to page 2</Link>
         <Link to="/">Go back to the homepage</Link>

@@ -1,11 +1,23 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header class="header">
 
     <div class="header-flex">
+      <div class="header-title">
+        <Link to="/">
+          <StaticImage
+            src="../images/mina-bui_logo_symbol.png"
+            width={75}
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Mina Bui's Logo"
+          />
+        </Link>
+      </div>
 
       <div class="header-nav">
         <nav>
@@ -15,10 +27,6 @@ const Header = ({ siteTitle }) => (
             <li><Link to="/contact/">Contact</Link></li>
           </ul>
         </nav>
-      </div>
-
-      <div class="header-title">
-        <h1><Link>{siteTitle}</Link></h1>
       </div>
 
       <div class="header-hire">

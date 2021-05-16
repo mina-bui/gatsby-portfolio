@@ -125,6 +125,18 @@ h6 {
 .section-4,
 footer {
   padding: 1.42em 15%;
+  .footer_line2 {
+    display: flex;
+
+    .footer_logo {
+      text-align: left;
+    }
+    .footer_copyright {
+      color: rgba(41, 41, 41, 1);
+      font-size: 16px;
+      text-align: right;
+    }
+  }
 }
 .section-1 {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/index_s1.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
@@ -536,16 +548,21 @@ header {
   top: 0; // End
   color: rgba(41, 41, 41, 1);
   text-align: center;
-  padding: 30px 0px;
+  padding: 50px 0px;
 
   .header-flex {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-items: center;
+    padding: 0 5%;
     a {
       color: rgba(41, 41, 41, 1);
       text-decoration: none;
     }
+  }
+
+  .header-title {
+    margin-top: -1em; // makes header logo symbol appear slightly higher than the navigation and hire button
   }
   .header-nav,
   .header-hire {
@@ -575,6 +592,10 @@ header {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    li {
+      display: inline;
+      margin-left: 2em;
+    }
   }
 }
 
@@ -588,5 +609,4 @@ h1 {
   font-size: 2.25rem;
   line-height: 1.1;
   color: rgba(8, 8, 8, 1);
-  text-transform: lowercase;
 }
