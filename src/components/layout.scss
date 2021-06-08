@@ -36,9 +36,8 @@
   src: local("spartan-mb"), url(../fonts/spartan-mb/SpartanMB-Regular.otf) format("opentype");
 }
 
-$headingFont: League Spartan, sans-serif;
+$headingFont: Spartan MB, sans-serif;
 $bodyFont: Libre Baskerville, serif;
-$navFont: Spartan MB, sans-serif;
 
 /* Color Palette */
 $green1: #cef79f;
@@ -48,6 +47,7 @@ $green4: #5c8226;
 $green5: #2a513f;
 $lightgrey1: #f6f6f6;
 $lightgrey2: #f1f1f1;
+$textBlack: rgb(34, 34, 34, 1);
 /* also white, black */
 
 /* ========================================= */
@@ -74,7 +74,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgba(41, 41, 41, 1);
+  color: $textBlack;
   font-family: $bodyFont;
   font-weight: normal;
   word-wrap: break-word;
@@ -132,40 +132,50 @@ footer {
       text-align: left;
     }
     .footer_copyright {
-      color: rgba(41, 41, 41, 1);
+      color: $textBlack;
       font-size: 16px;
       text-align: right;
     }
   }
 }
+.bar {
+  position: block;
+  width: 100%;
+  white-space: nowrap;
+  margin: 2rem 0rem;
+  overflow-x: hidden;
+}
+
 .section-1 {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/index_s1.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
+  background-color: brown;
+  //background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/index_s1.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
   background-size: cover;
   background-position-y: 60%;
   width: 100%;
   height: 1000px;
   padding: 9.9em 15% 0px 15%; // padding-top prevents text overlap with header
-  color: rgba(41, 41, 41, 1);
+  color: $textBlack;
 
   button {
-    color: rgba(41, 41, 41, 1);
+    color: $textBlack;
     border: 1px solid rgba(41, 41, 41, 1);
     margin-top: 0.5em;
   }
   .section-1_h2 {
-    font-size: 5rem;
-    font-family: $bodyFont;
-    color: rgba(8, 8, 8, 1);
+    font-size: 3rem;
+    font-family: $headingFont;
+    color: rgb(34, 34, 34, 1);
   }
 }
 .section-2 {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/index_s2.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
+  background-color: brown;
+  //background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/index_s2.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
   background-size: cover;
   background-position-x: 10%;
   background-position-y: 50%;
   width: 100%;
-  height: 750px;
-  padding: 8.33em 15% 0 7%;
+  height: 1500px;
+  padding: 8.33em 15% 0 15%;
   color: white;
   margin-top: 0px;
 
@@ -176,17 +186,97 @@ footer {
   h2,
   p {
     width: 60%;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .bar_content {
+    display: block; // must give content width
+    width: 100%;
+    transform: translateX(0%); // where to start animation
+    animation: move 10s linear infinite; // infinitely repeating animation
+    font-size: 1rem;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline;
+        margin-right: 1em;
+        &:before {
+          content: "\00B7";
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+  // create the animation
+  @keyframes move {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .venn-diagram {
+    .venn-circle-1 {
+      background-color: rgb(143, 188, 143, 0.8);
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border-radius: 400px;
+      p {
+        position: relative;
+        left: 60px;
+        top: 170px;
+        font-size: 1rem;
+        width: 30%;
+      }
+      &:hover {
+        background-color: rgb(143, 188, 143, 0.9);
+        transition-duration: 0.4s;
+      }
+    }
+
+    .venn-circle-2 {
+      background-color: rgb(85, 107, 47, 0.8);
+      position: relative;
+      top: -400px;
+      left: 200px;
+      width: 400px;
+      height: 400px;
+      border-radius: 400px;
+      p {
+        position: relative;
+        left: 250px;
+        top: 170px;
+        font-size: 1rem;
+        width: 30%;
+      }
+      &:hover {
+        background-color: rgb(85, 107, 47, 0.9);
+        transition-duration: 0.4s;
+      }
+    }
+    .venn-middle p {
+      position: relative;
+      top: -615px;
+      left: 245px;
+      font-size: 1rem;
+    }
   }
 }
 
 .section-3 {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/index_s3.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
+  background-color: brown;
+  //background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/index_s3.jpg"); // linear-gradient(black,black) uses RGBA colors to darken an image
   background-size: cover;
   background-position-x: 10%;
   background-position-y: 50%;
   width: 100%;
-  height: 750px;
-  padding: 8.33em 15% 0 7%;
+  height: 1400px;
+  padding: 8.33em 15% 0 15%;
   color: white;
   margin-top: 0px;
 
@@ -194,9 +284,29 @@ footer {
     color: white;
   }
 
-  h2,
-  p {
-    width: 60%;
+  .s3-gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+
+    .s3-gallery-block1,
+    .s3-gallery-block2,
+    .s3-gallery-block3,
+    .s3-gallery-block4 {
+      width: 500px;
+      height: 500px;
+      p {
+        font-size: 1rem;
+        span {
+          text-align: right;
+        }
+      }
+    }
+    .s3-gallery-block1,
+    .s3-gallery-block2,
+    .s3-gallery-block3 {
+      margin-right: 1rem;
+    }
   }
 }
 
@@ -249,7 +359,7 @@ dfn {
 }
 mark {
   background-color: #ff0;
-  color: #000;
+  color: $textBlack;
 }
 small {
   font-size: 80%;
@@ -424,13 +534,13 @@ a {
 
   &:link,
   &:visited {
-    color: rgba(41, 41, 41, 1);
+    color: $textBlack;
   }
   &:hover {
     outline-width: 0;
   }
   &:active {
-    color: rgba(41, 41, 41, 1);
+    color: $textBlack;
     outline-width: 0;
   }
 }
@@ -438,9 +548,9 @@ a {
 hr {
   box-sizing: content-box;
   overflow: visible;
-  margin: 0 0 calc(1.45rem - 1px) 0;
+  margin: 5rem 0 5rem 0;
   padding: 0;
-  background: hsla(0, 0%, 0%, 0.2);
+  background: white;
   border: none;
   height: 1px;
 }
@@ -448,7 +558,7 @@ hr {
 /* || Buttons */
 button {
   margin: none;
-  color: rgba(41, 41, 41, 1);
+  color: $textBlack;
   border: 1px solid white;
   background: transparent;
   border-radius: 30px;
@@ -546,46 +656,32 @@ header {
   left: 0;
   right: 0;
   top: 0; // End
-  color: rgba(41, 41, 41, 1);
+  color: $textBlack;
   text-align: center;
   padding: 50px 0px;
 
   .header-flex {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     justify-items: center;
     padding: 0 5%;
     a {
-      color: rgba(41, 41, 41, 1);
+      color: $textBlack;
       text-decoration: none;
     }
   }
 
   .header-title {
-    margin-top: -1em; // makes header logo symbol appear slightly higher than the navigation and hire button
+    margin-top: -0.5em; // makes header logo symbol appear slightly higher than the navigation and hire button
   }
-  .header-nav,
-  .header-hire {
+  .header-nav {
     font-size: 1rem; //16px
-    font-family: $navFont;
+    font-family: $headingFont;
     line-height: 1;
     letter-spacing: 0.175em;
   }
   .header-nav {
     text-align: left;
-  }
-  .header-hire {
-    text-align: right;
-    #header-hire-btn {
-      color: white;
-      border: 1px solid rgba(41, 41, 41, 1);
-      background: rgba(41, 41, 41, 1);
-      border-radius: 30px;
-      padding: 12px 32px 8px 32px;
-      &:hover {
-        background: black;
-      }
-    }
   }
 
   ul {
@@ -608,5 +704,5 @@ h1 {
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
-  color: rgba(8, 8, 8, 1);
+  color: $textBlack;
 }
